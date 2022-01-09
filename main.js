@@ -6,9 +6,19 @@ const { token } = require("./config.json");
 const {myIntents} = require("./intents.json");
 const client = new Client({ intents: myIntents });
 
+const randSong = [
+	"Weezer",
+	"Massive Attack",
+	"Zerwee",
+	"Minecraft",
+];
+
+const random = Math.floor(Math.random() * randSong.length);
+
 // When the client is ready, run this code (only once)
 client.once("ready", () => {
 	console.log("Ichigo is awake!");
+	client.user.setActivity(randSong[random], { type: "LISTENING" });
 });
 
 // Triggers for listen words
@@ -19,7 +29,9 @@ const triggers = [
 ];
 
 client.on("messageCreate", message => {
-	if (message.content == "hello") message.reply("beep!");
+	if (triggers.some(word => message.content.includes(word))) {
+		message.reply("beep!")
+	  };
 });
 
 // Login to Discord with your client"s token
