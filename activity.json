@@ -1,0 +1,29 @@
+[
+	{
+		"name" : [
+			"Weezer",
+			"Massive Attack",
+			"Zerwee",
+			"Minecraft OST",
+			"Death Grips",
+			"Lullabies",
+			"Stardew Valley OST",
+			"Neutral Milk Hotel",
+			"Cold Cave",
+			"Japandroids",
+			"The Microphones",
+			"Rural Alberta Advantage",
+			"Arcade Fire"
+		],
+		"options" : "LISTENING"
+	},
+	{
+		"name" : [
+			"Gumball",
+			"Pee-Wee's Playhouse",
+			"TikTok",
+			"Surf's Up"
+		],
+		"options" : "WATCHING"
+	}
+]
