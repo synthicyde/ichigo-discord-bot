@@ -22,11 +22,7 @@ client.once("ready", () => {
 });
 
 // Triggers for listen words
-const triggers = [
-	"seed",
-	"weezer",
-	"shaina",
-];
+const triggers = require("./words.json");
 
 client.on("messageCreate", message => {
 	if (triggers.some(word => message.content.toLowerCase().includes(word))) {
