@@ -43,8 +43,8 @@ client.once("ready", () => {
 
 // Global needed
 const milliConv = 60000; // For converting minutes to milliseconds
-const channelrandom = "929655220009578539"; // CHANGE ID BEFORE RUN
-const shainaID = "<@205187968460259328>"; // CHANGE ID BEFORE RUN
+const channelrandom = "924216225364574218"; // CHANGE ID BEFORE RUN
+const shainaID = "<@479023275390009344>"; // CHANGE ID BEFORE RUN
 
 // Random Activity Change
 const mintimeactiv = milliConv * 15;
@@ -75,7 +75,6 @@ client.on("messageCreate", message => {
 const mintimebeep = milliConv * 15;
 const maxtimebeep = milliConv * 240;
 // const channelrandom = client.channels.cache.get("929655220009578539"); // CHANGE ID BEFORE RUN!!!
-console.log(channelrandom);
 function sendRandMessage() {
 	client.channels.cache.get(channelrandom).send("beep!");
 }
