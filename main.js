@@ -92,7 +92,7 @@ const sendRandShaina = () => {
 client.on("ready", () => {
 	const randActSet = setRandomInterval(() => newActivity(), mintimeactiv, maxtimeactiv);
 	const beep = setRandomInterval(() => sendRandMessage(), mintimebeep, maxtimebeep);
-	const beep = setRandomInterval(() => sendRandShaina(), minTimeShaina, maxTimeShaina);
+	const sendShainaHeart = setRandomInterval(() => sendRandShaina(), minTimeShaina, maxTimeShaina);
 });
 
 // Login to Discord with your client"s token
