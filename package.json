@@ -12,7 +12,8 @@
     "@discordjs/voice": "^0.7.5",
     "discord.js": "^13.5.1",
     "dotenv": "^10.0.0",
-    "package": "^1.0.1"
+    "package": "^1.0.1",
+    "set-random-interval": "^1.1.0"
   },
   "devDependencies": {
     "eslint": "^8.6.0"
