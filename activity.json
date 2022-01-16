@@ -22,8 +22,19 @@
 			"Gumball",
 			"Pee-Wee's Playhouse",
 			"TikTok",
-			"Surf's Up"
+			"Surf's Up",
+			"Linus Tech Tips"
 		],
 		"options" : "WATCHING"
+	},
+	{
+		"name" : [
+			"with cheese",
+			"with Mike and Ikes",
+			"with forage ball",
+			"with buttons",
+			"with stuffed animals"
+		],
+		"options" : "PLAYING"
 	}
 ]

@@ -72,16 +72,16 @@ client.on("messageCreate", message => {
 });
 
 // Send random message
-const mintimebeep = milliConv * 15;
-const maxtimebeep = milliConv * 240;
+const mintimebeep = milliConv * 30;
+const maxtimebeep = milliConv * 24 * 60;
 // const channelrandom = client.channels.cache.get("929655220009578539"); // CHANGE ID BEFORE RUN!!!
 function sendRandMessage() {
 	client.channels.cache.get(channelrandom).send("beep!");
 }
 
 // Random emoji to Shaina
-const minTimeShaina = milliConv * 60;
-const maxTimeShaina = milliConv * 24 * 60;
+const minTimeShaina = milliConv * 12 * 60;
+const maxTimeShaina = milliConv * 48 * 60;
 // const shainaMessage = Guild.members.cache.find(user => user.id === "205187968460259328"); // CHANGE ID BEFORE RUN!!!
 const sendRandShaina = () => {
 	client.channels.cache.get(channelrandom).send(shainaID + " :heart:");
