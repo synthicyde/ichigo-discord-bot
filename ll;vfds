@@ -1,0 +1,440 @@
+[1mdiff --git a/.eslintrc.json b/.eslintrc.json[m
+[1mindex 1cffc5c..152114a 100644[m
+[1m--- a/.eslintrc.json[m
+[1m+++ b/.eslintrc.json[m
+[36m@@ -1,49 +1,49 @@[m
+[31m-{[m
+[31m-	"extends": "eslint:recommended",[m
+[31m-	"env": {[m
+[31m-		"node": true,[m
+[31m-		"es6": true[m
+[31m-	},[m
+[31m-	"parserOptions": {[m
+[31m-		"ecmaVersion": 2021[m
+[31m-	},[m
+[31m-	"rules": {[m
+[31m-		"arrow-spacing": ["warn", { "before": true, "after": true }],[m
+[31m-		"brace-style": ["error", "stroustrup", { "allowSingleLine": true }],[m
+[31m-		"comma-dangle": ["error", "always-multiline"],[m
+[31m-		"comma-spacing": "error",[m
+[31m-		"comma-style": "error",[m
+[31m-		"curly": ["error", "multi-line", "consistent"],[m
+[31m-		"dot-location": ["error", "property"],[m
+[31m-		"handle-callback-err": "off",[m
+[31m-		"indent": ["error", "tab"],[m
+[31m-		"keyword-spacing": "error",[m
+[31m-		"max-nested-callbacks": ["error", { "max": 4 }],[m
+[31m-		"max-statements-per-line": ["error", { "max": 2 }],[m
+[31m-		"no-console": "off",[m
+[31m-		"no-empty-function": "error",[m
+[31m-		"no-floating-decimal": "error",[m
+[31m-		"no-inline-comments": "error",[m
+[31m-		"no-lonely-if": "error",[m
+[31m-		"no-multi-spaces": "error",[m
+[31m-		"no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 1, "maxBOF": 0 }],[m
+[31m-		"no-shadow": ["error", { "allow": ["err", "resolve", "reject"] }],[m
+[31m-		"no-trailing-spaces": ["error"],[m
+[31m-		"no-var": "error",[m
+[31m-		"object-curly-spacing": ["error", "always"],[m
+[31m-		"prefer-const": "error",[m
+[31m-		"quotes": ["error", "double"],[m
+[31m-		"semi": ["error", "always"],[m
+[31m-		"space-before-blocks": "error",[m
+[31m-		"space-before-function-paren": ["error", {[m
+[31m-			"anonymous": "never",[m
+[31m-			"named": "never",[m
+[31m-			"asyncArrow": "always"[m
+[31m-		}],[m
+[31m-		"space-in-parens": "error",[m
+[31m-		"space-infix-ops": "error",[m
+[31m-		"space-unary-ops": "error",[m
+[31m-		"spaced-comment": "error",[m
+[31m-		"yoda": "error"[m
+[31m-	}[m
+[32m+[m[32m{[m[41m[m
+[32m+[m	[32m"extends": "eslint:recommended",[m[41m[m
+[32m+[m	[32m"env": {[m[41m[m
+[32m+[m		[32m"node": true,[m[41m[m
+[32m+[m		[32m"es6": true[m[41m[m
+[32m+[m	[32m},[m[41m[m
+[32m+[m	[32m"parserOptions": {[m[41m[m
+[32m+[m		[32m"ecmaVersion": 2021[m[41m[m
+[32m+[m	[32m},[m[41m[m
+[32m+[m	[32m"rules": {[m[41m[m
+[32m+[m		[32m"arrow-spacing": ["warn", { "before": true, "after": true }],[m[41m[m
+[32m+[m		[32m"brace-style": ["error", "stroustrup", { "allowSingleLine": true }],[m[41m[m
+[32m+[m		[32m"comma-dangle": ["error", "always-multiline"],[m[41m[m
+[32m+[m		[32m"comma-spacing": "error",[m[41m[m
+[32m+[m		[32m"comma-style": "error",[m[41m[m
+[32m+[m		[32m"curly": ["error", "multi-line", "consistent"],[m[41m[m
+[32m+[m		[32m"dot-location": ["error", "property"],[m[41m[m
+[32m+[m		[32m"handle-callback-err": "off",[m[41m[m
+[32m+[m		[32m"indent": ["error", "tab"],[m[41m[m
+[32m+[m		[32m"keyword-spacing": "error",[m[41m[m
+[32m+[m		[32m"max-nested-callbacks": ["error", { "max": 4 }],[m[41m[m
+[32m+[m		[32m"max-statements-per-line": ["error", { "max": 2 }],[m[41m[m
+[32m+[m		[32m"no-console": "off",[m[41m[m
+[32m+[m		[32m"no-empty-function": "error",[m[41m[m
+[32m+[m		[32m"no-floating-decimal": "error",[m[41m[m
+[32m+[m		[32m"no-inline-comments": "error",[m[41m[m
+[32m+[m		[32m"no-lonely-if": "error",[m[41m[m
+[32m+[m		[32m"no-multi-spaces": "error",[m[41m[m
+[32m+[m		[32m"no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 1, "maxBOF": 0 }],[m[41m[m
+[32m+[m		[32m"no-shadow": ["error", { "allow": ["err", "resolve", "reject"] }],[m[41m[m
+[32m+[m		[32m"no-trailing-spaces": ["error"],[m[41m[m
+[32m+[m		[32m"no-var": "error",[m[41m[m
+[32m+[m		[32m"object-curly-spacing": ["error", "always"],[m[41m[m
+[32m+[m		[32m"prefer-const": "error",[m[41m[m
+[32m+[m		[32m"quotes": ["error", "double"],[m[41m[m
+[32m+[m		[32m"semi": ["error", "always"],[m[41m[m
+[32m+[m		[32m"space-before-blocks": "error",[m[41m[m
+[32m+[m		[32m"space-before-function-paren": ["error", {[m[41m[m
+[32m+[m			[32m"anonymous": "never",[m[41m[m
+[32m+[m			[32m"named": "never",[m[41m[m
+[32m+[m			[32m"asyncArrow": "always"[m[41m[m
+[32m+[m		[32m}],[m[41m[m
+[32m+[m		[32m"space-in-parens": "error",[m[41m[m
+[32m+[m		[32m"space-infix-ops": "error",[m[41m[m
+[32m+[m		[32m"space-unary-ops": "error",[m[41m[m
+[32m+[m		[32m"spaced-comment": "error",[m[41m[m
+[32m+[m		[32m"yoda": "error"[m[41m[m
+[32m+[m	[32m}[m[41m[m
+ }[m
+\ No newline at end of file[m
+[1mdiff --git a/.gitignore b/.gitignore[m
+[1mindex 2dfedcb..d166dfc 100644[m
+[1m--- a/.gitignore[m
+[1m+++ b/.gitignore[m
+[36m@@ -1,6 +1,6 @@[m
+[31m-node_modules/[m
+[31m-.env[m
+[31m-config.json[m
+[31m-package-lock.json[m
+[31m-.vscode[m
+[32m+[m[32mnode_modules/[m[41m[m
+[32m+[m[32m.env[m[41m[m
+[32m+[m[32mconfig.json[m[41m[m
+[32m+[m[32mpackage-lock.json[m[41m[m
+[32m+[m[32m.vscode[m[41m[m
+ TEMP.js[m
+\ No newline at end of file[m
+[1mdiff --git a/activity.json b/activity.json[m
+[1mindex d17c110..e8929fd 100644[m
+[1m--- a/activity.json[m
+[1m+++ b/activity.json[m
+[36m@@ -1,29 +1,29 @@[m
+[31m-[[m
+[31m-	{[m
+[31m-		"name" : [[m
+[31m-			"Weezer",[m
+[31m-			"Massive Attack",[m
+[31m-			"Zerwee",[m
+[31m-			"Minecraft OST",[m
+[31m-			"Death Grips",[m
+[31m-			"Lullabies",[m
+[31m-			"Stardew Valley OST",[m
+[31m-			"Neutral Milk Hotel",[m
+[31m-			"Cold Cave",[m
+[31m-			"Japandroids",[m
+[31m-			"The Microphones",[m
+[31m-			"Rural Alberta Advantage",[m
+[31m-			"Arcade Fire"[m
+[31m-		],[m
+[31m-		"options" : "LISTENING"[m
+[31m-	},[m
+[31m-	{[m
+[31m-		"name" : [[m
+[31m-			"Gumball",[m
+[31m-			"Pee-Wee's Playhouse",[m
+[31m-			"TikTok",[m
+[31m-			"Surf's Up"[m
+[31m-		],[m
+[31m-		"options" : "WATCHING"[m
+[31m-	}[m
+[32m+[m[32m[[m[41m[m
+[32m+[m	[32m{[m[41m[m
+[32m+[m		[32m"name" : [[m[41m[m
+[32m+[m			[32m"Weezer",[m[41m[m
+[32m+[m			[32m"Massive Attack",[m[41m[m
+[32m+[m			[32m"Zerwee",[m[41m[m
+[32m+[m			[32m"Minecraft OST",[m[41m[m
+[32m+[m			[32m"Death Grips",[m[41m[m
+[32m+[m			[32m"Lullabies",[m[41m[m
+[32m+[m			[32m"Stardew Valley OST",[m[41m[m
+[32m+[m			[32m"Neutral Milk Hotel",[m[41m[m
+[32m+[m			[32m"Cold Cave",[m[41m[m
+[32m+[m			[32m"Japandroids",[m[41m[m
+[32m+[m			[32m"The Microphones",[m[41m[m
+[32m+[m			[32m"Rural Alberta Advantage",[m[41m[m
+[32m+[m			[32m"Arcade Fire"[m[41m[m
+[32m+[m		[32m],[m[41m[m
+[32m+[m		[32m"options" : "LISTENING"[m[41m[m
+[32m+[m	[32m},[m[41m[m
+[32m+[m	[32m{[m[41m[m
+[32m+[m		[32m"name" : [[m[41m[m
+[32m+[m			[32m"Gumball",[m[41m[m
+[32m+[m			[32m"Pee-Wee's Playhouse",[m[41m[m
+[32m+[m			[32m"TikTok",[m[41m[m
+[32m+[m			[32m"Surf's Up"[m[41m[m
+[32m+[m		[32m],[m[41m[m
+[32m+[m		[32m"options" : "WATCHING"[m[41m[m
+[32m+[m	[32m}[m[41m[m
+ ][m
+\ No newline at end of file[m
+[1mdiff --git a/intents.json b/intents.json[m
+[1mindex e17f0ae..2537d73 100644[m
+[1m--- a/intents.json[m
+[1m+++ b/intents.json[m
+[36m@@ -1,13 +1,13 @@[m
+[31m-{[m
+[31m-	"myIntents":[[m
+[31m-		"GUILDS",[m
+[31m-		"GUILD_EMOJIS_AND_STICKERS",[m
+[31m-		"GUILD_MESSAGES",[m
+[31m-		"GUILD_MESSAGE_REACTIONS",[m
+[31m-		"GUILD_MESSAGE_TYPING",[m
+[31m-		"DIRECT_MESSAGES",[m
+[31m-		"DIRECT_MESSAGE_REACTIONS",[m
+[31m-		"DIRECT_MESSAGE_TYPING",[m
+[31m-		"GUILD_SCHEDULED_EVENTS"[m
+[31m-	][m
+[32m+[m[32m{[m[41m[m
+[32m+[m	[32m"myIntents":[[m[41m[m
+[32m+[m		[32m"GUILDS",[m[41m[m
+[32m+[m		[32m"GUILD_EMOJIS_AND_STICKERS",[m[41m[m
+[32m+[m		[32m"GUILD_MESSAGES",[m[41m[m
+[32m+[m		[32m"GUILD_MESSAGE_REACTIONS",[m[41m[m
+[32m+[m		[32m"GUILD_MESSAGE_TYPING",[m[41m[m
+[32m+[m		[32m"DIRECT_MESSAGES",[m[41m[m
+[32m+[m		[32m"DIRECT_MESSAGE_REACTIONS",[m[41m[m
+[32m+[m		[32m"DIRECT_MESSAGE_TYPING",[m[41m[m
+[32m+[m		[32m"GUILD_SCHEDULED_EVENTS"[m[41m[m
+[32m+[m	[32m][m[41m[m
+ }[m
+\ No newline at end of file[m
+[1mdiff --git a/main.js b/main.js[m
+[1mindex 352187f..f1a1790 100644[m
+[1m--- a/main.js[m
+[1m+++ b/main.js[m
+[36m@@ -1,99 +1,99 @@[m
+[31m-// Require the necessary discord.js classes[m
+[31m-const { Client, Intents, Channel, Guild } = require("discord.js");[m
+[31m-const { token } = require("./config.json");[m
+[31m-// const SetRandomInterval = require("set-random-interval");[m
+[31m-[m
+[31m-// setRandomInterval code[m
+[31m-const setRandomInterval = (intervalFunction, minDelay, maxDelay) => {[m
+[31m-	let timeout;[m
+[31m-	const runInterval = () => {[m
+[31m-		const timeoutFunction = () => {[m
+[31m-			intervalFunction();[m
+[31m-			runInterval();[m
+[31m-		};[m
+[31m-		const delay = Math.floor(Math.random() * (maxDelay - minDelay + 1)) + minDelay;[m
+[31m-		timeout = setTimeout(timeoutFunction, delay);[m
+[31m-	};[m
+[31m-	runInterval();[m
+[31m-	return {[m
+[31m-		clear() {[m
+[31m-			clearTimeout(timeout);[m
+[31m-		},[m
+[31m-	};[m
+[31m-};[m
+[31m-[m
+[31m-// Create a new client instance[m
+[31m-const { myIntents } = require("./intents.json");[m
+[31m-const client = new Client({ intents: myIntents });[m
+[31m-[m
+[31m-// Calls in the activity[m
+[31m-const activity = require("./activity.json"); // call JSON for activities[m
+[31m-let randomActivity = Math.floor(Math.random() * activity.length); // selects random activity[m
+[31m-let randomName = Math.floor(Math.random() * activity[randomActivity].name.length); // selects random name[m
+[31m-let activityOptions = activity[randomActivity].options; // selects to appropriate options[m
+[31m-// Return in console[m
+[31m-// console.log(activity[randomActivity].name[randomName]);[m
+[31m-// console.log(activityOptions);[m
+[31m-[m
+[31m-// When the client is ready, run this code (only once)[m
+[31m-client.once("ready", () => {[m
+[31m-	console.log("Ichigo is awake!");[m
+[31m-	client.user.setActivity(activity[randomActivity].name[randomName], { type: activityOptions });[m
+[31m-});[m
+[31m-[m
+[31m-// Global needed[m
+[31m-const milliConv = 60000; // For converting minutes to milliseconds[m
+[31m-const channelrandom = "929655220009578539"; // CHANGE ID BEFORE RUN[m
+[31m-const shainaID = "<@205187968460259328>"; // CHANGE ID BEFORE RUN[m
+[31m-[m
+[31m-// Random Activity Change[m
+[31m-const mintimeactiv = milliConv * 15;[m
+[31m-const maxtimeactiv = milliConv * 60;[m
+[31m-const randNumber = () => {[m
+[31m-	return Math.random();[m
+[31m-};[m
+[31m-const newActivity = () => {[m
+[31m-	let newNumb = randNumber();[m
+[31m-	let newRandActivity = Math.floor(newNumb * activity.length);[m
+[31m-	let newRandName = Math.floor(newNumb * activity[newRandActivity].name.length);[m
+[31m-	client.user.setActivity(activity[newRandActivity].name[newRandName], { type: activity[newRandActivity].options });[m
+[31m-};[m
+[31m-[m
+[31m-// Triggers for listen words[m
+[31m-const triggers = require("./words.json");[m
+[31m-[m
+[31m-// Reply to trigger words[m
+[31m-client.on("messageCreate", message => {[m
+[31m-	if (triggers.some(word => message.content.toLowerCase().includes(word))) {[m
+[31m-		message.reply("beep!")[m
+[31m-		// let channelreply = client.channels.cache.find(channel => channel.id == message.channelId);[m
+[31m-		// channelreply.send("beep!");[m
+[31m-	}[m
+[31m-});[m
+[31m-[m
+[31m-// Send random message[m
+[31m-const mintimebeep = milliConv * 15;[m
+[31m-const maxtimebeep = milliConv * 240;[m
+[31m-// const channelrandom = client.channels.cache.get("929655220009578539"); // CHANGE ID BEFORE RUN!!![m
+[31m-console.log(channelrandom);[m
+[31m-function sendRandMessage() {[m
+[31m-	client.channels.cache.get(channelrandom).send("beep!");[m
+[31m-}[m
+[31m-[m
+[31m-// Random emoji to Shaina[m
+[31m-const minTimeShaina = milliConv * 60;[m
+[31m-const maxTimeShaina = milliConv * 24 * 60;[m
+[31m-// const shainaMessage = Guild.members.cache.find(user => user.id === "205187968460259328"); // CHANGE ID BEFORE RUN!!![m
+[31m-const sendRandShaina = () => {[m
+[31m-	client.channels.cache.get(channelrandom).send(shainaID + " :heart:");[m
+[31m-};[m
+[31m-[m
+[31m-// All random functions[m
+[31m-client.on("ready", () => {[m
+[31m-	const randActSet = setRandomInterval(() => newActivity(), mintimeactiv, maxtimeactiv);[m
+[31m-	const beep = setRandomInterval(() => sendRandMessage(), mintimebeep, maxtimebeep);[m
+[31m-	const beep = setRandomInterval(() => sendRandShaina(), minTimeShaina, maxTimeShaina);[m
+[31m-});[m
+[31m-[m
+[31m-// Login to Discord with your client"s token[m
+[32m+[m[32m// Require the necessary discord.js classes[m[41m[m
+[32m+[m[32mconst { Client, Intents, Channel, Guild } = require("discord.js");[m[41m[m
+[32m+[m[32mconst { token } = require("./config.json");[m[41m[m
+[32m+[m[32m// const SetRandomInterval = require("set-random-interval");[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m// setRandomInterval code[m[41m[m
+[32m+[m[32mconst setRandomInterval = (intervalFunction, minDelay, maxDelay) => {[m[41m[m
+[32m+[m	[32mlet timeout;[m[41m[m
+[32m+[m	[32mconst runInterval = () => {[m[41m[m
+[32m+[m		[32mconst timeoutFunction = () => {[m[41m[m
+[32m+[m			[32mintervalFunction();[m[41m[m
+[32m+[m			[32mrunInterval();[m[41m[m
+[32m+[m		[32m};[m[41m[m
+[32m+[m		[32mconst delay = Math.floor(Math.random() * (maxDelay - minDelay + 1)) + minDelay;[m[41m[m
+[32m+[m		[32mtimeout = setTimeout(timeoutFunction, delay);[m[41m[m
+[32m+[m	[32m};[m[41m[m
+[32m+[m	[32mrunInterval();[m[41m[m
+[32m+[m	[32mreturn {[m[41m[m
+[32m+[m		[32mclear() {[m[41m[m
+[32m+[m			[32mclearTimeout(timeout);[m[41m[m
+[32m+[m		[32m},[m[41m[m
+[32m+[m	[32m};[m[41m[m
+[32m+[m[32m};[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m// Create a new client instance[m[41m[m
+[32m+[m[32mconst { myIntents } = require("./intents.json");[m[41m[m
+[32m+[m[32mconst client = new Client({ intents: myIntents });[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m// Calls in the activity[m[41m[m
+[32m+[m[32mconst activity = require("./activity.json"); // call JSON for activities[m[41m[m
+[32m+[m[32mlet randomActivity = Math.floor(Math.random() * activity.length); // selects random activity[m[41m[m
+[32m+[m[32mlet randomName = Math.floor(Math.random() * activity[randomActivity].name.length); // selects random name[m[41m[m
+[32m+[m[32mlet activityOptions = activity[randomActivity].options; // selects to appropriate options[m[41m[m
+[32m+[m[32m// Return in console[m[41m[m
+[32m+[m[32m// console.log(activity[randomActivity].name[randomName]);[m[41m[m
+[32m+[m[32m// console.log(activityOptions);[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m// When the client is ready, run this code (only once)[m[41m[m
+[32m+[m[32mclient.once("ready", () => {[m[41m[m
+[32m+[m	[32mconsole.log("Ichigo is awake!");[m[41m[m
+[32m+[m	[32mclient.user.setActivity(activity[randomActivity].name[randomName], { type: activityOptions });[m[41m[m
+[32m+[m[32m});[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m// Global needed[m[41m[m
+[32m+[m[32mconst milliConv = 60000; // For converting minutes to milliseconds[m[41m[m
+[32m+[m[32mconst channelrandom = "929655220009578539"; // CHANGE ID BEFORE RUN[m[41m[m
+[32m+[m[32mconst shainaID = "<@205187968460259328>"; // CHANGE ID BEFORE RUN[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m// Random Activity Change[m[41m[m
+[32m+[m[32mconst mintimeactiv = milliConv * 15;[m[41m[m
+[32m+[m[32mconst maxtimeactiv = milliConv * 60;[m[41m[m
+[32m+[m[32mconst randNumber = () => {[m[41m[m
+[32m+[m	[32mreturn Math.random();[m[41m[m
+[32m+[m[32m};[m[41m[m
+[32m+[m[32mconst newActivity = () => {[m[41m[m
+[32m+[m	[32mlet newNumb = randNumber();[m[41m[m
+[32m+[m	[32mlet newRandActivity = Math.floor(newNumb * activity.length);[m[41m[m
+[32m+[m	[32mlet newRandName = Math.floor(newNumb * activity[newRandActivity].name.length);[m[41m[m
+[32m+[m	[32mclient.user.setActivity(activity[newRandActivity].name[newRandName], { type: activity[newRandActivity].options });[m[41m[m
+[32m+[m[32m};[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m// Triggers for listen words[m[41m[m
+[32m+[m[32mconst triggers = require("./words.json");[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m// Reply to trigger words[m[41m[m
+[32m+[m[32mclient.on("messageCreate", message => {[m[41m[m
+[32m+[m	[32mif (triggers.some(word => message.content.toLowerCase().includes(word))) {[m[41m[m
+[32m+[m		[32mmessage.reply("beep!")[m[41m[m
+[32m+[m		[32m// let channelreply = client.channels.cache.find(channel => channel.id == message.channelId);[m[41m[m
+[32m+[m		[32m// channelreply.send("beep!");[m[41m[m
+[32m+[m	[32m}[m[41m[m
+[32m+[m[32m});[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m// Send random message[m[41m[m
+[32m+[m[32mconst mintimebeep = milliConv * 15;[m[41m[m
+[32m+[m[32mconst maxtimebeep = milliConv * 240;[m[41m[m
+[32m+[m[32m// const channelrandom = client.channels.cache.get("929655220009578539"); // CHANGE ID BEFORE RUN!!![m[41m[m
+[32m+[m[32mconsole.log(channelrandom);[m[41m[m
+[32m+[m[32mfunction sendRandMessage() {[m[41m[m
+[32m+[m	[32mclient.channels.cache.get(channelrandom).send("beep!");[m[41m[m
+[32m+[m[32m}[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m// Random emoji to Shaina[m[41m[m
+[32m+[m[32mconst minTimeShaina = milliConv * 60;[m[41m[m
+[32m+[m[32mconst maxTimeShaina = milliConv * 24 * 60;[m[41m[m
+[32m+[m[32m// const shainaMessage = Guild.members.cache.find(user => user.id === "205187968460259328"); // CHANGE ID BEFORE RUN!!![m[41m[m
+[32m+[m[32mconst sendRandShaina = () => {[m[41m[m
+[32m+[m	[32mclient.channels.cache.get(channelrandom).send(shainaID + " :heart:");[m[41m[m
+[32m+[m[32m};[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m// All random functions[m[41m[m
+[32m+[m[32mclient.on("ready", () => {[m[41m[m
+[32m+[m	[32mconst randActSet = setRandomInterval(() => newActivity(), mintimeactiv, maxtimeactiv);[m[41m[m
+[32m+[m	[32mconst beep = setRandomInterval(() => sendRandMessage(), mintimebeep, maxtimebeep);[m[41m[m
+[32m+[m	[32mconst beep = setRandomInterval(() => sendRandShaina(), minTimeShaina, maxTimeShaina);[m[41m[m
+[32m+[m[32m});[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m// Login to Discord with your client"s token[m[41m[m
+ client.login(token);[m
+\ No newline at end of file[m
+[1mdiff --git a/words.json b/words.json[m
+[1mindex 67adb85..23cdf74 100644[m
+[1m--- a/words.json[m
+[1m+++ b/words.json[m
+[36m@@ -1,9 +1,9 @@[m
+[31m-[[m
+[31m-	"seed",[m
+[31m-	"weezer",[m
+[31m-	"shaina",[m
+[31m-	"gumball",[m
+[31m-	"bird",[m
+[31m-	"parrot",[m
+[31m-	"ichigo"[m
+[32m+[m[32m[[m[41m[m
+[32m+[m	[32m"seed",[m[41m[m
+[32m+[m	[32m"weezer",[m[41m[m
+[32m+[m	[32m"shaina",[m[41m[m
+[32m+[m	[32m"gumball",[m[41m[m
+[32m+[m	[32m"bird",[m[41m[m
+[32m+[m	[32m"parrot",[m[41m[m
+[32m+[m	[32m"ichigo"[m[41m[m
+ ][m
+\ No newline at end of file[m
