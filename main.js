@@ -42,7 +42,8 @@ client.once("ready", () => {
 });
 
 // Global needed
-const milliConv = 60000; // For converting minutes to milliseconds
+const milliConv = 60000; // For converting milliseconds to minutes
+const millihour = 3600000; // For converting milliseconds to hours
 const channelrandom = "924216225364574218"; // CHANGE ID BEFORE RUN
 const shainaID = "<@479023275390009344>"; // CHANGE ID BEFORE RUN
 
@@ -72,16 +73,16 @@ client.on("messageCreate", message => {
 });
 
 // Send random message
-const mintimebeep = milliConv * 30;
-const maxtimebeep = milliConv * 24 * 60;
+const mintimebeep = millihour * 12;
+const maxtimebeep = millihour * 36;
 // const channelrandom = client.channels.cache.get("929655220009578539"); // CHANGE ID BEFORE RUN!!!
 function sendRandMessage() {
 	client.channels.cache.get(channelrandom).send("beep!");
 }
 
 // Random emoji to Shaina
-const minTimeShaina = milliConv * 12 * 60;
-const maxTimeShaina = milliConv * 48 * 60;
+const minTimeShaina = millihour * 24 * 2;
+const maxTimeShaina = millihour * 24 * 7;
 // const shainaMessage = Guild.members.cache.find(user => user.id === "205187968460259328"); // CHANGE ID BEFORE RUN!!!
 const sendRandShaina = () => {
 	client.channels.cache.get(channelrandom).send(shainaID + " :heart:");
